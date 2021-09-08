@@ -16,7 +16,7 @@ exports.creds = {
   responseMode: 'form_post', 
 
   // Required, the reply URL registered in AAD for your app
-  redirectUrl: 'http://localhost:3000/auth/openid/return', 
+  redirectUrl: 'http://3.109.171.18/auth/openid/return', 
 
   // Required if we use http for redirectUrl
   allowHttpForRedirectUrl: true,
@@ -74,7 +74,7 @@ exports.creds = {
 exports.destroySessionUrl = 
   'https://login.microsoftonline.com/<tenant_name>.onmicrosoft.com/oauth2/v2.0/logout' +
   '?p=<signin_policy_name>' +
-  '&post_logout_redirect_uri=http://localhost:3000';
+  '&post_logout_redirect_uri=http://3.109.171.18:3000';
 
 // If you want to use the mongoDB session store for session middleware; otherwise we will use the default
 // session store provided by express-session.
@@ -82,7 +82,7 @@ exports.destroySessionUrl =
 exports.useMongoDBSessionStore = true;
 
 // If you want to use mongoDB, provide the uri here for the database.
-exports.databaseUri = 'mongodb://localhost/OIDCStrategy';
+exports.databaseUri = 'mongodb://3.109.171.18/OIDCStrategy';
 
 // How long you want to keep session in mongoDB.
 exports.mongoDBSessionMaxAge = 24 * 60 * 60;  // 1 day (unit is second)
